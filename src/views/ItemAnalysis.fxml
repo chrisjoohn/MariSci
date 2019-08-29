@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="902.0" style="-fx-background-color: #f8f6dd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton onAction="#handleBack" fx:id="back" layoutX="22.0" layoutY="13.0" text="BACK">
+         <font>
+            <Font name="Königsberg" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="YearAndSection" layoutX="283.0" layoutY="53.0" text="First Year - Section Name">
+         <font>
+            <Font name="Louis George Café" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="ModuleNo" layoutX="370.0" layoutY="96.0" text="MODULE NO.">
+         <font>
+            <Font name="Louis George Café" size="28.0" />
+         </font>
+      </Label>
+      <BorderPane fx:id="table1" layoutX="95.0" layoutY="160.0" prefHeight="204.0" prefWidth="732.0">
+         <top>
+            <Label fx:id="QuizNo1" alignment="CENTER" prefHeight="23.0" prefWidth="749.0" style="-fx-background-color: #322f2f;" text="QUIZ 1" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Louis George Café" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="ItemAnalysis1" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #322f2f;" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="no1" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="NO." />
+                <TableColumn fx:id="correct1" minWidth="330.0" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="CORRECT" />
+                  <TableColumn fx:id="wrong1" minWidth="330.0" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="WRONG" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="table2" layoutX="95.0" layoutY="381.0" prefHeight="204.0" prefWidth="732.0">
+         <top>
+            <Label fx:id="QuizNo2" alignment="CENTER" prefHeight="23.0" prefWidth="749.0" style="-fx-background-color: #322f2f;" text="QUIZ 2" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Louis George Café" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="ItemAnalysis2" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #322f2f;" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="no2" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="NO." />
+                  <TableColumn fx:id="correct2" minWidth="330.0" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="CORRECT" />
+                  <TableColumn fx:id="wrong2" minWidth="330.0" prefWidth="75.0" style="-fx-background-color: #f9b525; -fx-font-size: 16;" text="WRONG" />
+               </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</Pane>

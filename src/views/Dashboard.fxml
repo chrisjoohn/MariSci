@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="bg" fitHeight="604.0" fitWidth="902.0" layoutX="-1.0">
+         <image>
+            <Image url="@../Resources/Images/default001.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="container1" arcHeight="40.0" arcWidth="40.0" fill="#fae538" height="121.0" layoutX="90.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="98.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#8d8888" height="70.0" radius="34.5" width="70.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle fx:id="container2" arcHeight="50.0" arcWidth="50.0" fill="#2653af" height="99.0" layoutX="32.0" layoutY="229.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="211.0">
+         <effect>
+            <DropShadow color="#8d8888" height="70.0" radius="34.5" width="70.0" />
+         </effect></Rectangle>
+      <Label fx:id="studentsNumber" layoutX="101.0" layoutY="95.0" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" text="300">
+         <font>
+            <Font name="Louis George Café" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="enrolledStudents" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="144.0" prefHeight="70.0" prefWidth="124.0" text="STUDENTS ENROLLED" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Louis George Café" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="performancePercentage" layoutX="93.0" layoutY="229.0" text="96%" textFill="WHITE">
+         <font>
+            <Font name="Louis George Café" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="overallStudentperf" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="269.0" prefHeight="70.0" prefWidth="226.0" text="OVERALL STUDENT PERFORMANCE" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Louis George Café" size="16.0" />
+         </font>
+      </Label>
+      <BorderPane fx:id="chart1" layoutX="285.0" layoutY="79.0" prefHeight="251.0" prefWidth="581.0" style="-fx-background-color: #FFFFFF;">
+         <top>
+            <Label fx:id="enrolledStudents_label" alignment="CENTER" prefHeight="21.0" prefWidth="582.0" style="-fx-background-color: #322f2f;" text="TOTAL NO. OF STUDENTS ENROLLED PER GRADE LEVEL" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Louis George Café" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <BarChart fx:id="enrolledStudents_barChart" prefHeight="208.0" prefWidth="581.0" BorderPane.alignment="CENTER">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </center>
+         <effect>
+            <DropShadow color="#8d8888" height="70.0" radius="34.5" width="70.0" />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="chart2" layoutX="32.0" layoutY="350.0" prefHeight="238.0" prefWidth="408.0" style="-fx-background-color: #FFFFFF;">
+         <top>
+            <Label fx:id="classRating_label" alignment="CENTER" prefHeight="21.0" prefWidth="582.0" style="-fx-background-color: #322f2f;" text="OVERALL CLASS RATING" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Louis George Café" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <BarChart fx:id="classRating_barChart" prefHeight="208.0" prefWidth="581.0" BorderPane.alignment="CENTER">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </center>
+         <effect>
+            <DropShadow color="#8d8888" height="70.0" radius="34.5" width="70.0" />
+         </effect>
+      </BorderPane>
+      <BorderPane fx:id="chart3" layoutX="453.0" layoutY="350.0" prefHeight="238.0" prefWidth="408.0" style="-fx-background-color: #FFFFFF;">
+         <top>
+            <Label fx:id="instructorsRating_label" alignment="CENTER" prefHeight="21.0" prefWidth="582.0" style="-fx-background-color: #322f2f;" text="OVERALL INSTRUCTORS RATING" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Louis George Café" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <BarChart fx:id="instructorsRating_barChart" prefHeight="208.0" prefWidth="581.0" BorderPane.alignment="CENTER">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </center>
+         <effect>
+            <DropShadow color="#8d8888" height="70.0" radius="34.5" width="70.0" />
+         </effect>
+      </BorderPane>
+      <JFXButton fx:id="returnMain" layoutX="22.0" layoutY="13.0" text="RETURN" onAction="#handleReturn">
+         <font>
+            <Font name="Königsberg" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>
